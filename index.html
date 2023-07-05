@@ -215,7 +215,57 @@ a:hover, a:active {
   background-color: #126328;
 }
 </style>
-</head>
+<style type="text/css">@font-face{
+    font-family: 'bnazanin';
+    src:'./../../fonts/bnazanin.ttf';
+}
+
+.dideo-tooltip {
+    position: relative;
+    display: inline-block;
+    font-family: 'bnazanin';
+    font-size: 0;
+    padding: 3px 5px;
+}
+
+.dideo-tooltip .tooltiptext {
+    visibility: hidden;
+    font-family: 'bnazanin';
+    width: 120px;
+    font-size: 13px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 110%;
+}
+.dideo-img{
+    width: 18px;
+    height: 18px;
+    margin-bottom: -3px;
+    filter: drop-shadow(0px 0px 2px #adadad);
+    webkit:filter: drop-shadow(0px 0px 2px #adadad);
+}
+.dideo-tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+.dideo-tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.srg{
+    min-width: 750px;
+}</style></head>
 <body>
 <div class="wrapper">
   <h2>Registration</h2>
@@ -232,12 +282,9 @@ a:hover, a:active {
     <div class="input-box">
       <input type="id" placeholder="your Telegram ID" required="">
     </div>
-    <div class="policy">
-      <input type="checkbox">
-      <h3>I accept all terms &amp; condition</h3>
-    </div>
+    
     <div class="input-box button">
-  <a class="input-box button" href="/succ/" target="_blank">
+  <a class="input-box button" href="/succ/">
     Register Now
   </a>
     </div>
